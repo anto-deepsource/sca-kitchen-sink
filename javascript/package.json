@@ -1,4 +1,6 @@
 {
+	"name": "sca-kitchen-sink",
+	"version": "0.1.0"
 	"dependencies": {
 		"aws-cdk-lib": "2.29.0",
 		"axios": "0.9.1",
