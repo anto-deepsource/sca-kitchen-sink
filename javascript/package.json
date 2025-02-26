@@ -1,7 +1,7 @@
 {
 	"dependencies": {
 		"aws-cdk-lib": "2.29.0",
-		"axios": "0.9.1",
+		"axios": "0.29.0",
 		"express-fileupload": "1.1.4",
 		"heroku-env": "^0.1.1",
 		"libpq": "1.8.9",
