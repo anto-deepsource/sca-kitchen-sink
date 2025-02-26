@@ -6,7 +6,7 @@
 		"heroku-env": "^0.1.1",
 		"libpq": "1.8.9",
 		"lodash": "4.9.0",
-		"mongo-express": "0.47.0"
+		"mongo-express": "1.0.2"
 	},
 	"devDependencies": {
 		"app-builder-lib": "20.42.0",
