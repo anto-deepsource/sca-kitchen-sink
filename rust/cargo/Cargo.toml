@@ -1,0 +1,20 @@
+[package]
+name = "vulnerable-rust"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+# Regex with ReDoS vulnerability (CVE-2017-18589)
+regex = "0.2.10"
+
+# Time with panic vulnerability (CVE-2020-26235)
+time = "0.1.40"
+
+# Tempfile with TOCTOU vulnerability (CVE-2018-20997)
+tempfile = "2.2.0"
+
+# Base64 with panic vulnerability (CVE-2017-1000430)
+base64 = "0.5.0"
+
+# URL with buffer overflow (CVE-2019-16144)
+url = "1.7.0" 

@@ -1,0 +1,17 @@
+{
+  "name": "yarn-vulnerable-demo",
+  "version": "1.0.0",
+  "description": "Demo of vulnerable dependencies using yarn",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "4.16.0",
+    "lodash": "4.17.11",
+    "marked": "0.3.19",
+    "mongoose": "5.7.0",
+    "node-serialize": "0.0.4"
+  },
+  "packageManager": "yarn@4.7.0"
+}

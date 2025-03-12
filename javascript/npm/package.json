@@ -1,0 +1,16 @@
+{
+  "name": "vulnerable-demo",
+  "version": "1.0.0",
+  "description": "Demo of vulnerable dependencies",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "lodash": "4.17.11",
+    "node-serialize": "0.0.4",
+    "marked": "0.3.19",
+    "express": "4.16.0",
+    "mongoose": "5.7.0"
+  }
+} 

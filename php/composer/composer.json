@@ -1,0 +1,20 @@
+{
+    "name": "vulnerable/composer-demo",
+    "description": "Demo of vulnerable PHP dependencies",
+    "type": "project",
+    "require": {
+        "php": "^7.2",
+        "symfony/http-foundation": "4.3.4",
+        "symfony/http-kernel": "4.3.4",
+        "phpmailer/phpmailer": "6.1.7",
+        "guzzlehttp/guzzle": "6.5.4",
+        "monolog/monolog": "2.0.0",
+        "doctrine/orm": "2.7.0"
+    },
+    "config": {
+        "platform": {
+            "php": "7.2.34"
+        },
+        "sort-packages": true
+    }
+} 

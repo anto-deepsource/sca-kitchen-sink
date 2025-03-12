@@ -40,3 +40,16 @@ venv.bak/
 .vscode/
 *.swp
 *.swo
+
+# Nuget
+obj/
+bin/
+
+# Maven
+target/
+
+# Gradle
+build/
+
+# Composer
+vendor/
