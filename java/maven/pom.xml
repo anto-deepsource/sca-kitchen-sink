@@ -15,42 +15,36 @@
     </properties>
 
     <dependencies>
-        <!-- Log4j with known RCE vulnerability (CVE-2021-44228) -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.14.1</version>
         </dependency>
 
-        <!-- Spring Core with SpEL injection vulnerability (CVE-2022-22965) -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
             <version>5.3.17</version>
         </dependency>
 
-        <!-- Struts 2 with RCE vulnerability (CVE-2017-5638) -->
         <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-core</artifactId>
             <version>2.5.10</version>
         </dependency>
 
-        <!-- Hibernate with SQL Injection vulnerability (CVE-2019-14900) -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>5.4.2.Final</version>
         </dependency>
 
-        <!-- Apache Commons Collections with deserialization vulnerability (CVE-2015-7501) -->
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
             <version>3.2.1</version>
         </dependency>
 
-        <!-- Jackson Databind with RCE vulnerability (CVE-2019-12384) -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>

@@ -17,22 +17,16 @@ repositories {
 }
 
 dependencies {
-    // Log4j with known RCE vulnerability (CVE-2021-44228)
     implementation 'org.apache.logging.log4j:log4j-core:2.14.1'
     
-    // Spring Core with SpEL injection vulnerability (CVE-2022-22965)
     implementation 'org.springframework:spring-core:5.3.17'
     
-    // Struts 2 with RCE vulnerability (CVE-2017-5638)
     implementation 'org.apache.struts:struts2-core:2.5.10'
     
-    // Hibernate with SQL Injection vulnerability (CVE-2019-14900)
     implementation 'org.hibernate:hibernate-core:5.4.2.Final'
     
-    // Apache Commons Collections with deserialization vulnerability (CVE-2015-7501)
     implementation 'commons-collections:commons-collections:3.2.1'
     
-    // Jackson Databind with RCE vulnerability (CVE-2019-12384)
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.9'
 }
 

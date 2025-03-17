@@ -1,22 +1,15 @@
 source 'https://rubygems.org'
 
-# Rack with Information Disclosure (CVE-2018-16471)
 gem 'rack', '2.0.6'
 
-# JSON with Denial of Service (CVE-2018-8945)
 gem 'json', '2.1.0'
 
-# Sinatra with RCE vulnerability (CVE-2018-7212)
 gem 'sinatra', '2.0.0'
 
-# i18n with XSS vulnerability (CVE-2014-10077)
 gem 'i18n', '0.7.0'
 
-# Addressable with ReDoS vulnerability (CVE-2021-32740)
 gem 'addressable', '2.4.0'
 
-# Yard with Command Injection (CVE-2017-17042)
 gem 'yard', '0.9.11'
 
-# ActiveSupport with Deserialization vulnerability (CVE-2020-8165)
 gem 'activesupport', '5.2.4.3' 

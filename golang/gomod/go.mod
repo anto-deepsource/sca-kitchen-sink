@@ -6,18 +6,13 @@ toolchain go1.23.7
 
 require (
 
-	// Command injection (CVE-2023-25165)
 	github.com/docker/docker v20.10.24+incompatible
-	// Remote code execution (CVE-2023-39325)
 	github.com/hashicorp/consul/api v1.24.0
 
-	// SQL injection (CVE-2023-27484)
 	github.com/jackc/pgx/v4 v4.18.0
 
-	// Path traversal (CVE-2023-39325)
 	github.com/minio/minio-go/v7 v7.0.61
 
-	// Authentication bypass (CVE-2023-32731)
 	github.com/prometheus/client_golang v1.15.1
 )
 
