@@ -5,6 +5,11 @@ import subprocess
 import xml.etree.ElementTree as ET
 from sqlalchemy import create_engine, text
 import requests
+from cryptography.fernet import Fernet
+
+from jinja2 import Environment as je
+from workzeug.utils import secure_filename
+
 
 app = Flask(__name__)
 
@@ -56,5 +61,10 @@ def fetch_url():
     url = request.args.get('url', '')
     return requests.get(url).text  # Vulnerable to SSRF
 
+def encrypt_key(key):
+    return Fernet(key)
+
 if __name__ == '__main__':
-    app.run(debug=True) 
+    je.autoescape = False
+    secure_filename('test')
+    app.run(debug=True)
